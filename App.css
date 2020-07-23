@@ -1,0 +1,663 @@
+body {
+	background-color: rgb(53, 53, 53);
+}
+
+.entireContainer {
+	display: flex;
+}
+
+.font {
+	font-family: "Jost", sans-serif;
+}
+
+#inputContainer {
+	width: 25%;
+	margin: 40px 20px 150px 20px;
+	padding: 0px 10px 10px 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#newNoteText {
+	color: white;
+	display: flex;
+	justify-content: center;
+	font-size: 200%;
+	margin-bottom: 10px;
+}
+
+#newNoteText:hover {
+	cursor: default;
+}
+
+#titleInput {
+	font-size: 200%;
+	width: 100%;
+	padding: 5px;
+	margin-bottom: 10px;
+	background-color: rgb(255, 255, 255);
+}
+
+#tagsInput {
+	font-size: 125%;
+	width: 100%;
+	padding: 5px;
+	margin-bottom: 10px;
+	background-color: rgb(255, 255, 255);
+}
+
+#bodyInput {
+	font-size: 125%;
+	width: 100%;
+	height: 80%;
+	padding: 5px;
+	margin-bottom: 10px;
+	background-color: rgb(255, 255, 255);
+}
+
+#addNoteButton {
+	font-size: 150%;
+	width: 100%;
+	background-color: rgb(255, 255, 255);
+}
+
+#addNoteButton:hover {
+	cursor: pointer;
+}
+
+.allNonInput {
+	border-right: 2px solid red;
+	width: 75%;
+	height: 100vh;
+	display: flex;
+}
+.searchWindow {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-bottom: 2px solid red;
+}
+
+.searchFilterContainer {
+	display: flex;
+	margin: 5px 0px 5px 20px;
+	color: white;
+	font-size: 120%;
+	overflow: scroll;
+}
+
+.searchFilterButton:hover {
+	cursor: pointer;
+}
+
+.searchFilterText {
+	margin-right: 20px;
+}
+
+input[type="radio"] {
+	/* remove standard background appearance */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	/* create custom radiobutton appearance */
+	width: 12px;
+	height: 12px;
+	margin-right: 3px;
+	/* background-color only for content */
+	background-color: white;
+	border-radius: 50%;
+	outline: none;
+}
+
+/* appearance for checked radiobutton */
+input[type="radio"]:checked {
+	background-color: #71c0e4;
+	outline: none;
+}
+
+.searchBarContainer {
+	display: flex;
+	align-items: center;
+	height: 35px;
+	margin: 10px 0px 5px 10px;
+}
+
+.searchBar {
+	background-color: rgb(255, 255, 255);
+	padding: 10px 10px 10px 5px;
+	width: 100%;
+	height: 100%;
+	font-size: 150%;
+}
+
+.searchIcon {
+	margin: 10px 15px 10px 10px;
+	font-size: 120%;
+	color: rgb(133, 133, 133);
+}
+
+.searchIcon:hover {
+	color: white;
+	cursor: pointer;
+}
+
+.titleAndSearch {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	border-right: 2px solid red;
+}
+
+.titlesWindow {
+	word-wrap: break-word;
+	overflow: scroll;
+	font-size: 150%;
+	margin-top: 5px;
+}
+
+.titleContent {
+	margin: 10px;
+	padding: 10px;
+	overflow: scroll;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#notesWindow {
+	width: 70%;
+	word-wrap: break-word;
+	overflow: scroll;
+	position: relative;
+}
+
+.noteContent {
+	margin: 15px;
+	padding: 10px;
+}
+
+.noteHeading {
+	height: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
+#noteDate {
+	margin: 0;
+}
+
+#noteTitle {
+	font-size: 200%;
+	border-bottom: black 1px solid;
+}
+
+.noteContent:hover {
+	cursor: default;
+}
+
+.titleContent:hover {
+	cursor: default;
+}
+
+.noteWindowIcons {
+	display: flex;
+	font-size: 130%;
+	color: rgb(53, 53, 53);
+}
+
+#removeUnlockIconContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: -10px 7px 0px 0px;
+}
+
+#removeUnlockIconContainer:hover {
+	color: #aa0202;
+	cursor: pointer;
+}
+
+.hideUnlock {
+	display: none;
+}
+
+.banIcon {
+	margin-top: 0px;
+	transform: rotate(15deg);
+	font-size: 150%;
+	font-weight: 500;
+	position: relative;
+}
+
+.smallIcon {
+	position: absolute;
+	font-size: 100%;
+	z-index: 0;
+}
+
+.editIcon {
+	margin-left: 12px;
+}
+
+.editIcon:hover {
+	color: #aa0202;
+	cursor: pointer;
+}
+
+.lockIcon {
+	margin-top: 1px;
+	margin-left: 10px;
+}
+
+.lockIcon:hover {
+	color: #aa0202;
+	cursor: pointer;
+}
+
+.lockBlur {
+	background: repeating-linear-gradient(
+		135deg,
+		rgba(119, 119, 119, 0),
+		rgba(119, 119, 119, 0) 30px,
+		rgb(200, 0, 0, 0.4) 30px,
+		rgb(200, 0, 0, 0.4) 60px
+	);
+}
+
+.lockOpenBackground {
+	background: repeating-linear-gradient(
+		135deg,
+		rgba(119, 119, 119, 0),
+		rgba(119, 119, 119, 0) 30px,
+		rgb(200, 0, 0, 0.05) 30px,
+		rgb(200, 0, 0, 0.05) 60px
+	);
+}
+
+.blur {
+	filter: blur(3px);
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#dateAndDelete {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+#dateByTitle {
+	font-size: 60%;
+	margin-bottom: 3px;
+}
+
+.deleteIcon {
+	color: rgb(53, 53, 53);
+}
+
+.deleteIcon:hover {
+	color: #aa0202;
+	cursor: pointer;
+}
+
+.highlight {
+	animation: colorChange 2000ms ease-out forwards;
+}
+
+@keyframes colorChange {
+	0% {
+	}
+	50% {
+		background-color: white;
+	}
+	100% {
+	}
+}
+
+#editWindow {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(53, 53, 53, 0.9);
+	border: 3px black solid;
+	display: flex;
+	position: absolute;
+	justify-content: center;
+	z-index: 1;
+	backdrop-filter: blur(5px);
+	/* animation: appear 400ms ease-out forwards;
+	 */
+}
+
+@keyframes appear {
+	from {
+		opacity: 0%;
+	}
+	to {
+		opacity: 100%;
+	}
+}
+
+#editInputContainer {
+	width: 50%;
+	margin: 50px 0px 150px 0px;
+	padding: 0px 10px 10px 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#editNoteText {
+	color: white;
+	display: flex;
+	justify-content: center;
+	font-size: 200%;
+	margin-bottom: 10px;
+}
+
+#editNoteText:hover {
+	cursor: default;
+}
+
+#editButtons {
+	font-size: 150%;
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+}
+
+#editSaveButton {
+	background-color: rgb(255, 255, 255);
+	width: 50%;
+	margin-right: 5px;
+}
+
+#editCancelButton {
+	background-color: rgb(255, 255, 255);
+	width: 50%;
+}
+
+#colorMenu {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-top: 105px;
+}
+
+#colorDefault {
+	width: 38px;
+	height: 38px;
+	background-color: #71c0e4;
+	margin-bottom: 5px;
+}
+
+#colorDefault:hover {
+	cursor: pointer;
+	border: 2px solid white;
+}
+
+#colorTan {
+	width: 38px;
+	height: 38px;
+	background-color: #fae483;
+	margin-bottom: 5px;
+}
+
+#colorTan:hover {
+	cursor: pointer;
+	border: 2px solid white;
+}
+
+#colorPink {
+	width: 38px;
+	height: 38px;
+	background-color: #ff9df2;
+	margin-bottom: 5px;
+}
+
+#colorPink:hover {
+	cursor: pointer;
+	border: 2px solid white;
+}
+
+#colorGreen {
+	width: 38px;
+	height: 38px;
+	background-color: #c0ff85;
+	margin-bottom: 5px;
+}
+
+#colorGreen:hover {
+	cursor: pointer;
+	border: 2px solid white;
+}
+
+.selectedColor {
+	border: 2px solid white;
+}
+
+.nonSelectedColor {
+	border: 2px solid black;
+}
+
+.deleteIconSearch {
+	color: rgb(53, 53, 53);
+	font-size: 150%;
+	margin-left: -8%;
+	margin-right: 3%;
+}
+
+.deleteIconSearch:hover {
+	color: #aa0202;
+	cursor: pointer;
+}
+
+.welcomeMessage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 35%;
+	margin-left: 15%;
+	border: red 1px solid;
+	width: 70%;
+	padding: 30px 0px 30px 0px;
+}
+
+.welcomeHeading {
+	padding: 5px 20px 5px 20px;
+	color: white;
+	font-size: 250%;
+	margin-bottom: 10px;
+}
+
+.welcomeBody {
+	padding: 5px 0px 5px 20px;
+	color: white;
+	font-size: 165%;
+	display: flex;
+	align-items: center;
+}
+
+.arrowIcon {
+	font-size: 200%;
+	margin: 7px 20px 5px 20px;
+}
+
+.noResults {
+	font-size: 280%;
+	color: rgb(105, 105, 105);
+	border-bottom: 2px solid rgb(105, 105, 105);
+	margin: 6% 5% 0px 5%;
+	display: flex;
+	justify-content: center;
+}
+
+.createPasswordWindow {
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(5px);
+	position: absolute;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* animation: appear 400ms ease-out forwards; */
+}
+
+.passwordInputContainer {
+	width: 400px;
+	height: 350px;
+	margin-top: 12%;
+	background-color: rgba(199, 5, 43, 0.75);
+	border: black 4px solid;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 2;
+}
+
+.createPasswordText {
+	color: white;
+	font-size: 200%;
+	margin-bottom: 5px;
+}
+
+.passwordWarningText {
+	color: white;
+	font-size: 120%;
+	margin-bottom: 30px;
+}
+
+.passwordInput {
+	width: 50%;
+	margin-bottom: 8px;
+	font-size: 120%;
+}
+
+.savePasswordButton {
+	margin-top: 10px;
+	width: 50%;
+	font-size: 120%;
+	background: none;
+	color: white;
+	border: 1px solid white;
+	border-radius: 3px;
+}
+
+.savePasswordButton:hover {
+	cursor: pointer;
+}
+.exitPasswordWindowContainer {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.exitPasswordWindowIcon {
+	margin: 10px;
+	font-size: 140%;
+	float: right;
+}
+
+.exitPasswordWindowIcon:hover {
+	cursor: pointer;
+}
+
+.unlockingWindow {
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(3px);
+	position: absolute;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* animation: appear 200ms ease-out forwards; */
+}
+
+#unlockingInputContainer {
+	border: black 4px solid;
+	border-radius: 10px;
+	margin-top: 200px;
+	width: 350px;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(199, 5, 43, 0.75);
+	align-items: center;
+}
+
+#unlockPasswordInput {
+	font-size: 120%;
+	width: 50%;
+	margin-bottom: 10px;
+}
+
+.unlockText {
+	margin-top: -18px;
+	margin-bottom: 15px;
+	font-size: 200%;
+	color: white;
+}
+
+.unlockButton {
+	color: white;
+	font-size: 120%;
+	background: none;
+	width: 50%;
+	border: 1px solid white;
+	border-radius: 3px;
+}
+
+.exitUnlockWindowContainer {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.exitUnlockWindowIcon {
+	margin: 10px;
+	font-size: 140%;
+	float: right;
+}
+
+.exitUnlockWindowIcon:hover {
+	cursor: pointer;
+}
+
+.changePasswordContainer {
+	position: fixed;
+	margin-top: 95vh;
+	margin-left: 92vw;
+}
+
+.changePasswordButtonText {
+	color: white;
+	font-size: 80%;
+	padding: 3px;
+	border: 2px solid rgb(77, 77, 77);
+	background: none;
+	outline: none;
+}
+
+.changePasswordButtonText:hover {
+	cursor: pointer;
+}
+
+.changePasswordText {
+	color: white;
+	font-size: 200%;
+	margin-top: -15px;
+	margin-bottom: 5px;
+}
+
+.oldPassword {
+	width: 50%;
+	font-size: 120%;
+	margin-bottom: 20px;
+}
